@@ -1,0 +1,152 @@
+body {
+    background-color: #0A0A1F;
+    color: #DCDCE6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #1E1E2E;
+    color: #DCDCE6;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 650px;
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid #2A2A38;
+    background-color: #1E1E2E;
+    color: #DCDCE6;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #DCDCE6;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group, .radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 5px;
+}
+
+label {
+    color: #DCDCE6;
+    cursor: pointer;
+}
+
+button {
+    background-color: #2A2A38;
+    color: #DCDCE6;
+    border: 1px solid #DCDCE6;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #1E1E2E;
+    border-color: #DCDCE6;
+}
+
+.secondary-button {
+    background-color: #0A0A1F;
+    color: #DCDCE6;
+    border: 1px solid #2A2A38;
+}
+
+.secondary-button:hover {
+    background-color: #2A2A38;
+}
+
+.results-container {
+    margin-top: 20px;
+    border-top: 1px solid #2A2A38;
+    padding-top: 20px;
+    background-color: #1E1E2E;
+    color: #DCDCE6;
+}
+
+h1, h2, h3, p {
+    color: #DCDCE6;
+}
+
+.action-button {
+    padding: 8px 12px;
+    font-size: 0.85em;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.action-button.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.action-button.edit:hover {
+    background-color: #0056b3;
+}
+
+.action-button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-button.delete:hover {
+    background-color: #c82333;
+}
+
+.action-button.confirm {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-button.confirm:hover {
+    background-color: #c82333;
+}
+
+.action-button.cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.action-button.cancel:hover {
+    background-color: #5a6268;
+}
+
+.danger-button {
+    background-color: #7A2E3A;
+    color: #DCDCE6;
+    margin-bottom: 20px;
+}
+
+.danger-button:hover {
+    background-color: #5C2229;
+    transform: translateY(-2px);
+}
+
+.danger-button.confirm-state {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.danger-button.confirm-state:hover {
+    background-color: #e0a800;
+}

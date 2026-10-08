@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+    <title>Movie Genie UI</title>
+</head>
+<body>
+<main class="container">
+    <h1>Movie Genie</h1>
+    <p>Track and get suggestions of movies to watch based on Current Mood, Preference, and Genre Choices.</p>
+
+    <form id="movieForm">
+        <input type="hidden" id="movieId">
+
+        <fieldset>
+            <legend>Current Mood</legend>
+            <div class="form-group">
+                <p class="radio-group-heading">How are you feeling right now?</p>
+                <div class="radio-group">
+                    <label for="moodDrained">
+                        <input type="radio" id="moodDrained" name="moodType" value="drained" checked>
+                        Drained
+                    </label>
+                    <label for="moodPlayful">
+                        <input type="radio" id="moodPlayful" name="moodType" value="playful">
+                        Playful or Happy
+                    </label>
+                    <label for="moodRestless">
+                        <input type="radio" id="moodRestless" name="moodType" value="restless">
+                        Restless
+                    </label>
+                    <label for="moodReflective">
+                        <input type="radio" id="moodReflective" name="moodType" value="reflective">
+                        Reflective
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Movie Preference</legend>
+            <div class = "form-group">
+                <label for = "maxRuntime">Max length:</label>
+                <input type = "number" id="maxRuntime" name="maxRuntime" min="64" value="0">
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="animated">
+                <label for="animated">Animated Only</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Movie Genres</legend>
+
+            <div class="form-group">
+                <p class="radio-group-heading">Primary Genre:</p>
+                <div class="radio-group">
+                    <label for="genreAction">
+                        <input type="radio" id="genreAction" name="movieTone" value="action" checked>
+                        Action or Thriller
+                    </label>
+                    <label for="genreComedy">
+                        <input type="radio" id="genreComedy" name="movieTone" value="comedy">
+                        Comedy
+                    </label>
+                    <label for="genreDrama">
+                        <input type="radio" id="genreDrama" name="movieTone" value="drama">
+                        Drama or Romance
+                    </label>
+                    <label for="genreHorror">
+                        <input type="radio" id="genreHorror" name="movieTone" value="horror">
+                        Horror or Mystery
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <p class="radio-group-heading">Secondary Genre:</p>
+                <div class="radio-group">
+                    <label for="styleSciFi">
+                        <input type="radio" id="styleSciFi" name="movieStyle" value="scifi" checked>
+                        Sci-Fi or Fantasy
+                    </label>
+                    <label for="styleFamily">
+                        <input type="radio" id="styleFamily" name="movieStyle" value="family">
+                        Family
+                    </label>
+                    <label for="styleIndie">
+                        <input type="radio" id="styleIndie" name="movieStyle" value="indie">
+                        Indie
+                    </label>
+                    <label for="styleHistorical">
+                        <input type="radio" id="styleHistorical" name="movieStyle" value="historical">
+                        Historical
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <button type="submit" id="submitButton">Wish</button>
+        <button type="button" id="clearFormButton" class="secondary-button">New Genie</button>
+    </form>
+
+    <section id="decisionObj" class="results-container" style="display: none;">
+        <h2>Current Wish:</h2>
+        <div id="Display">
+            <ul>
+                <li id="movieTitle">Movie Title:</li>
+                <li id="movieRuntime">Runtime:</li>
+                <li id="animatedDisplay">Animated:</li>
+                <li id="movieTone">Genre:</li>
+                <li id="movieStyle">Genre:</li>
+                <li id="moviePlot">Plot:</li>
+            </ul>
+        </div>
+        <p class="note"><em>Note: "</em></p>
+    </section>
+
+    <section class="table-container">
+        <h2>Your Wish History</h2>
+<!---        <button type="button" id="clearAllDataButton" class="danger-button" style="display: block;">Clear All Saved Data</button> --->
+        <table id="historyTable" style="display: none;">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Runtime</th>
+                <th>Animated</th>
+                <th>Genre</th>
+                <th>Style</th>
+                <th>Plot</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="history-list">
+            <!-- Table rows will be rendered here by JavaScript -->
+            </tbody>
+        </table>
+        <p id="noEntriesMessage" class="note" style="display: block;">No wishes saved yet.</p>
+    </section>
+</main>
+</body>
+</html>
